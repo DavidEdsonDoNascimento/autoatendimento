@@ -39,3 +39,9 @@ model Restaurant {
 ```bash
  npx prisma format
 ```
+
+## criando a migration
+
+```bash
+npx prisma migrate dev
+```

@@ -45,3 +45,21 @@ model Restaurant {
 ```bash
 npx prisma migrate dev
 ```
+
+a convenção é que adotemos letras minusculas e underline para o nome da migration,
+logo o nome dessa primeira eu coloquei: add_initial_tables
+
+## alteração pra deletar em cascata:
+
+Caso eu delete um restaurante, quero que as categorias, produtos e pedidos sejam deletados
+Para isso precisamos incluir a clausula onDelete: Cascate dentro da relação
+
+## migration de alteração em schema.prisma
+
+Sempre que você altera esse arquivo schema.prisma, você precisa criar uma migration
+para refletir no seu banco
+
+```bash
+npx prisma migrate dev
+```
+o nome dessa alteração que inclui que foi deletar em cascata, vai ser:

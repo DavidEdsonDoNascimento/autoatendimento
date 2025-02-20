@@ -112,3 +112,24 @@ agr é só chamar o componente onde quiser e podes personalizar ele visto que el
 
 Fui até layout.tsx e configurei a fonte Poppins,
 o Nextjs ja tem integração direta com google-fonts
+
+## configurando ESLint
+
+adicionado plugin para ajustar as importações:
+
+```bash
+yarn add -D eslint-plugin-simple-import-sort@12.1.1
+```
+
+e no array eslintConfig (eslint.config.mjs) eu incluo alguns parâmetros.
+
+Depois criei .vscode na raiz do projeto com o arquivo settings.json
+e inclui um json pré configurado pra formatar os imports ao salvar
+
+Depois disso vou adicionar o plugin para formatar classes do tailwind:
+
+```bash
+yarn add -D prettier-plugin-tailwindcss@0.6.5
+```
+
+Crie um arquivo .prettierrc.json na raiz do projeto

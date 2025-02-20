@@ -107,3 +107,8 @@ E ele ira adicionar o código desse componente em seu projeto:
 src/components/ui/button.tsx
 
 agr é só chamar o componente onde quiser e podes personalizar ele visto que ele utiliza classes tailwind.
+
+## Configurando fonte
+
+Fui até layout.tsx e configurei a fonte Poppins,
+o Nextjs ja tem integração direta com google-fonts

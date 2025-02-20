@@ -86,3 +86,24 @@ Depois é só rodar o comando com:
 ```bash
 npx prisma db seed
 ```
+
+## Adicionando Biblioteca que trabalha com o Tailwind
+
+https://ui.shadcn.com/docs/installation/next
+
+```bash
+npx shadcn@2.3.0 init
+```
+
+Ela ja tem vários estilos prontos que utilizam tailwind
+Essa biblioteca você instala os componentes a medida que necessitar deles por exemplo:
+Quero colocar um Button na minha pagina eu vou e rodo:
+
+```bash
+npx shadcn@2.3.0 add button
+```
+
+E ele ira adicionar o código desse componente em seu projeto:
+src/components/ui/button.tsx
+
+agr é só chamar o componente onde quiser e podes personalizar ele visto que ele utiliza classes tailwind.

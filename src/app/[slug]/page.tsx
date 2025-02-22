@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import { getRestaurantBySlug } from '@/data/get-restaurant-by-slug';
 
 import { ConsumptionMethodOptions } from './components/consumption-method-option';

@@ -1,17 +1,23 @@
+import { ConsumptionMethod } from '@prisma/client';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 interface ConsumptionMethodOptionProps {
+	slug: string;
 	imageUrl: string;
 	imageAlt: string;
 	buttonText: string;
+	option: ConsumptionMethod;
 }
 export const ConsumptionMethodOptions = ({
+	slug,
 	imageUrl,
 	imageAlt,
 	buttonText,
+	option,
 }: ConsumptionMethodOptionProps) => {
 	return (
 		<Card>
@@ -24,7 +30,11 @@ export const ConsumptionMethodOptions = ({
 						className='object-contain'
 					/>
 				</div>
-				<Button>{buttonText}</Button>
+				<Button>
+					<Link href={`/${slug}/menu?consumptionMethod=${option}`}>
+						{buttonText}
+					</Link>
+				</Button>
 			</CardContent>
 		</Card>
 	);

@@ -1,3 +1,4 @@
+import { ConsumptionMethod } from '@prisma/client';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
@@ -41,11 +42,15 @@ const RestaurantPage = async ({ params }: RestaurantPageProps) => {
 					imageUrl='/dine_in.png'
 					imageAlt='Comer aqui'
 					buttonText='Comer aqui'
+					option={ConsumptionMethod.DINE_IN}
+					slug={slug}
 				/>
 				<ConsumptionMethodOptions
 					imageUrl='/takeaway.png'
 					imageAlt='Para levar'
 					buttonText='Para levar'
+					option={ConsumptionMethod.TAKEAWAY}
+					slug={slug}
 				/>
 			</div>
 		</div>

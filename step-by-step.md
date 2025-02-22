@@ -133,3 +133,13 @@ yarn add -D prettier-plugin-tailwindcss@0.6.5
 ```
 
 Crie um arquivo .prettierrc.json na raiz do projeto
+
+## criando uma única conexão com banco
+
+Vá até src/lib e crie um arquivo prisma.ts e inclua o código para que
+seja feita sempre uma única conexão com o banco de dados
+
+## captura do método de consumo (comer aqui ou levar)
+
+Feita a captura através da URL
+

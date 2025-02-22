@@ -30,7 +30,7 @@ export const ConsumptionMethodOptions = ({
 						className='object-contain'
 					/>
 				</div>
-				<Button>
+				<Button variant='secondary' className='rounded-full' asChild>
 					<Link href={`/${slug}/menu?consumptionMethod=${option}`}>
 						{buttonText}
 					</Link>

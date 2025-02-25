@@ -143,3 +143,25 @@ seja feita sempre uma única conexão com o banco de dados
 
 Feita a captura através da URL
 
+## Banco de dados com docker
+
+(CRIAR ARQUIVO DOCKER YML)
+Criado e configurado o docker-compose.yml que é como se fosse uma receita de tudo que será usado pelo projeto
+
+Depois rodei o comando:
+
+```bash
+docker compose up -d
+```
+
+-d: detach (deixa os services do docker em segundo plano)
+
+para criar as imagens do postgres
+
+```bash
+
+docker ps
+
+```
+
+lista os containers

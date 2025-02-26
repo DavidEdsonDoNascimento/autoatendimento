@@ -6,15 +6,19 @@ const HomePage = async () => {
 	const restaurants = await db.restaurant.findMany();
 
 	return (
-		<div className='flex flex-col items-center justify-center p-4'>
-			<h1 className='text-sm'>Pagina inicial</h1>
-			<div className='pt-5'>
+		<div className='flex flex-col items-center'>
+			<div className='w-full text-center h-[120px] p-5'>
+				<h3 className='text-lg font-semibold'>
+					Selecione o restaurante cadastrado:
+				</h3>
+			</div>
+			<div className='flex flex-col'>
 				{restaurants.map((r) => {
 					return (
 						<Link
 							href={`/${r.slug}`}
 							key={r.id}
-							className='bg-red-400 p-3 border rounded-sm text-white'
+							className='h-16 bg-red-400 p-5 border rounded-sm text-white'
 						>
 							{r.name}
 						</Link>

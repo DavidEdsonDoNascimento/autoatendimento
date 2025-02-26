@@ -2,24 +2,22 @@
 import { Product } from '@prisma/client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useParams, useSearchParams } from 'next/navigation';
+
+import { formatCurrency } from '@/helpers/format-currency';
 
 type ProductItemProps = {
 	product: Product;
 };
 export const ProductItem = ({ product }: ProductItemProps) => {
 	const { slug } = useParams<{ slug: string }>();
-	const formatPrice = (v: number) => {
-		return new Intl.NumberFormat('pt-BR', {
-			style: 'currency',
-			currency: 'BRL',
-		}).format(v);
-	};
+	const searchParams = useSearchParams();
+	const consumptionMethod = searchParams.get('consumptionMethod');
 
 	return (
 		<Link
 			key={product.id}
-			href={`/${slug}/menu/${product.id}`}
+			href={`/${slug}/menu/${product.id}?consumptionMethod=${consumptionMethod}`}
 			className='flex items-center justify-between gap-10 py-3 border-b'
 		>
 			{/* ESQUERDA | TEXTOS*/}
@@ -29,7 +27,7 @@ export const ProductItem = ({ product }: ProductItemProps) => {
 					{product.description}
 				</p>
 				<p className='pt-3 text-sm font-semibold'>
-					{formatPrice(product.price)}
+					{formatCurrency(product.price)}
 				</p>
 			</div>
 			{/* DIREITA | FOTOS */}
